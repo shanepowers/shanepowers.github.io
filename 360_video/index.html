@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+d<html>
+
+<head>
+	<title>A-Frame - Image Textures</title>
+	<script src="js/aframe-master.1.0.4.min.js"></script>
+</head>
+
+<body>
+<a-scene antialias="true">
+	
+	<a-assets>
+		<img id="text_red" src="images/text_red.jpg" crossorigin="anonymous"/>
+        <img id="image_red" src="images/red.jpg" crossorigin="anonymous"/>
+        <img id="text_blue" src="images/text_blue.jpg" crossorigin="anonymous"/>
+        <img id="image_blue" src="images/blue.jpg" crossorigin="anonymous"/>
+        <img id="text_yellow" src="images/text_yellow.jpg" crossorigin="anonymous"/>
+        <img id="image_yellow" src="images/yellow.jpg" crossorigin="anonymous"/>
+        <img id="text_green" src="images/text_green.jpg" crossorigin="anonymous"/>
+        <img id="image_green" src="images/green.jpg" crossorigin="anonymous"/>
+	</a-assets>
+		
+	<a-sky 
+		color = "#FFFFFF">
+	</a-sky>
+
+    <a-box
+		width = "1" height = "1" depth = "1"
+		position = "0 3 10"
+		rotation = "90 0 0"  
+		color = "#FF0000"
+		material = "src: #brown"
+		shadow = "cast: true; receive: true"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #image_red">
+	</a-box>
+    
+    <a-plane
+		width = "3" height = "1" depth = "1"
+		position = "0 1.8 10"
+		rotation = "180 0 180"  
+		material = "src: #text_red"
+		shadow = "cast: true; receive: true">
+	</a-plane>
+    
+    <a-box
+		width = "1" height = "1" depth = "1"
+		position = "-10 3 0"
+		rotation = "90 0 0"  
+		color = "#0492C2"
+		material = "src: #brown"
+		shadow = "cast: true; receive: true"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #image_blue">
+	</a-box>
+    
+    <a-plane
+		width = "3" height = "1" depth = "1"
+		position = "-10 1.8 0"
+		rotation = "0 90 0"  
+		material = "src: #text_blue"
+		shadow = "cast: true; receive: true">
+	</a-plane>
+    
+     <a-box
+		width = "1" height = "1" depth = "1"
+		position = "0 3 -10"
+		rotation = "90 0 0"  
+		color = "#FCD12A"
+		material = "src: #brown"
+		shadow = "cast: true; receive: true"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #image_yellow">
+	</a-box>
+    
+    <a-plane
+		width = "3" height = "1" depth = "1"
+		position = "0 1.8 -10"
+		rotation = "0 0 0"  
+		material = "src: #text_yellow"
+		shadow = "cast: true; receive: true">
+	</a-plane>
+    
+    <a-box
+		width = "1" height = "1" depth = "1"
+		position = "10 3 0"
+		rotation = "90 0 0"  
+		color = "#149414"
+		material = "src: #brown"
+		shadow = "cast: true; receive: true"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #image_green">
+	</a-box>
+    
+    <a-plane
+		width = "3" height = "1" depth = "1"
+		position = "10 1.8 0"
+		rotation = "180 90 180"  
+		material = "src: #text_green"
+		shadow = "cast: true; receive: true">
+	</a-plane>
+    
+    <a-camera>
+        <a-cursor></a-cursor>
+    </a-camera>
+    
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    
+</a-scene>
+</body>
+</html>
